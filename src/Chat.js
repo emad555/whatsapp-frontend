@@ -11,7 +11,7 @@ const[input, setInput] = useState("")
 
 const sendMessage =async(e)=>{
     e.preventDefault();
-    await axios.post('/messages/new', {
+    await axios.post(`${process.env.REACT_APP_API_URL}messages/new`, {
     message: input,
     name: "Emad's chat",
     timestamp: "Just Now!",

@@ -12,7 +12,7 @@ function App() {
 const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    axios.get('/messages/sync')
+    axios.get(`${process.env.REACT_APP_API_URL}messages/sync`)
     .then(Response=>{
       setMessages(Response.data)
     });
